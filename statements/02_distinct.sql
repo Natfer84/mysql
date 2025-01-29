@@ -1,0 +1,1 @@
+SELECT DISTINCT age FROM hellow_mysql.alumnos; /*DISTINCT busca los campos distintos*/

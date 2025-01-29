@@ -1,0 +1,3 @@
+/* LIMITA LA BUSQUEDA A LAS FILAS*/
+
+SELECT * FROM hellow_mysql.alumnos LIMIT 3;

@@ -1,0 +1,68 @@
+-- Crear una tabla
+create table person1(
+id int,
+name varchar(45),
+surname varchar(45),
+email varchar(100),
+created date
+);
+--RESTRINCIÓN NOT NULL
+-- DATO OBLIGATORIO
+create table person3(
+id int NOT NULL,
+name varchar(45) NOT NULL,
+surname varchar(45),
+email varchar(100),
+created datetime
+);
+--CAMPO UNICO
+create table person3(
+id int NOT NULL,
+name varchar(45) NOT NULL,
+surname varchar(45),
+email varchar(100),
+created date,
+UNIQUE(id)
+);
+--CREAR CLAVE PRIMARIA
+create table person4(
+id int NOT NULL,
+name varchar(45) NOT NULL,
+surname varchar(45),
+email varchar(100),
+created date,
+primary key (id)
+);
+--CHECK criterio para un campo. ej. mayor de 18
+create table person5(
+id int NOT NULL,
+name varchar(45) NOT NULL,
+surname varchar(45),
+email varchar(100),
+age int,
+created date,
+primary key (id),
+check(age > 69)
+);
+--DEFAULT, por defecto grabe fecha y hora del momento de guardar el dato
+create table person6(
+id int NOT NULL,
+name varchar(45) NOT NULL,
+surname varchar(45),
+email varchar(100),
+age int,
+created datetime DEFAULT current_timestamp(),
+primary key (id),
+check(age > 69)
+);
+--AUTO INCREMENT, auto incrementa solo
+create table person7(
+id int NOT NULL AUTO_INCREMENT,
+name varchar(45) NOT NULL,
+surname varchar(45),
+email varchar(100),
+age int,
+created datetime DEFAULT current_timestamp(),
+primary key (id),
+check(age > 69)
+);
